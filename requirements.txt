@@ -1,0 +1,8 @@
+fastapi
+jinja2
+fastmvc
+python-multipart
+python-dotenv
+google-cloud-firestore
+gunicorn
+uvicorn[standard]

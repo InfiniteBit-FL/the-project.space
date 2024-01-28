@@ -1,0 +1,186 @@
+{% extends 'static_pages/templates/_base.html' %}
+
+
+{% block content %}
+<!--
+  This example requires some changes to your config:
+
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+      require('@tailwindcss/aspect-ratio'),
+    ],
+  }
+  ```
+-->
+
+<div class="flex flex-col mt-20 border-b border-gray-200 lg:border-0">
+    <div class="relative">
+        <div aria-hidden="true" class="absolute hidden h-full w-1/2 bg-gray-100 lg:block"></div>
+        <div class="relative bg-gray-100 lg:bg-transparent">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:grid lg:grid-cols-2 lg:px-8">
+                <div class="mx-auto max-w-2xl py-24 lg:max-w-none lg:py-64">
+                    <div class="lg:pr-16">
+
+                        <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl xl:text-6xl">The Project
+                            Space</h1>
+                        <p class="mt-4 text-xl text-gray-600">A prototyping and experimentation space to support an
+                            infinite sea of ideas.</p>
+                        <div class="mt-6">
+                            <a href="#recent-projects"
+                                class="inline-block rounded-md border border-transparent bg-blue-600 px-8 py-3 font-medium text-white hover:bg-blue-700">Recent
+                                Projects</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="h-48 w-full sm:h-64 lg:absolute lg:right-0 lg:top-0 lg:h-full lg:w-1/2">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="" class="h-full w-full object-cover object-center">
+        </div>
+    </div>
+</div>
+
+<!-- Trending products -->
+<section id='recent-projects' aria-labelledby="trending-heading" class="bg-white">
+    <div class="py-16 sm:py-24 lg:mx-auto lg:max-w-7xl lg:px-8 lg:py-32">
+        <div class="flex items-center justify-between px-4 sm:px-6 lg:px-0">
+            <h2 id="trending-heading" class="text-2xl font-bold tracking-tight text-gray-900">Recent Projects</h2>
+            <a href="#" class="hidden text-sm font-semibold text-blue-600 hover:text-blue-500 sm:block">
+                Find more
+                <span aria-hidden="true"> &rarr;</span>
+            </a>
+        </div>
+
+        <div class="relative mt-8">
+            <div class="relative w-full overflow-x-auto">
+                <ul role="list"
+                    class="mx-4 inline-flex space-x-8 sm:mx-6 lg:mx-0 lg:grid lg:grid-cols-4 lg:gap-x-8 lg:space-x-0">
+                    <li class="inline-flex w-64 flex-col text-center lg:w-auto">
+                        <div class="group relative">
+                            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200">
+                                <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Black machined steel pen with hexagonal grip and small white logo at top."
+                                    class="h-full w-full object-cover object-center group-hover:opacity-75">
+                            </div>
+                            <div class="mt-6">
+                                <p class="text-sm text-gray-500">Coming Soon</p>
+                                <h3 class="mt-1 font-semibold text-gray-900">
+                                    <a href="#">
+                                        <span class="absolute inset-0"></span>
+                                        Project One
+                                    </a>
+                                </h3>
+                                <p class="mt-1 text-gray-900">Web Application</p>
+                            </div>
+                        </div>
+
+                    </li>
+
+                    <!-- More products... -->
+                </ul>
+            </div>
+        </div>
+
+        <div class="mt-12 px-4 sm:hidden">
+            <a href="#" class="text-sm font-semibold text-blue-600 hover:text-blue-500">
+                See everything
+                <span aria-hidden="true"> &rarr;</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Collections -->
+<section aria-labelledby="collections-heading" class="bg-gray-100">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
+            <h2 id="collections-heading" class="text-2xl font-bold text-gray-900">Recent Writings</h2>
+
+            <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
+                <div class="group relative">
+                    <div
+                        class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                        <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg"
+                            alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
+                            class="h-full w-full object-cover object-center">
+                    </div>
+                    <h3 class="mt-6 text-sm text-gray-500">
+                        <a href="#">
+                            <span class="absolute inset-0"></span>
+                            Desk and Office
+                        </a>
+                    </h3>
+                    <p class="text-base font-semibold text-gray-900">Work from home accessories</p>
+                </div>
+                <div class="group relative">
+                    <div
+                        class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                        <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg"
+                            alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant."
+                            class="h-full w-full object-cover object-center">
+                    </div>
+                    <h3 class="mt-6 text-sm text-gray-500">
+                        <a href="#">
+                            <span class="absolute inset-0"></span>
+                            Self-Improvement
+                        </a>
+                    </h3>
+                    <p class="text-base font-semibold text-gray-900">Journals and note-taking</p>
+                </div>
+                <div class="group relative">
+                    <div
+                        class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                        <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-03.jpg"
+                            alt="Collection of four insulated travel bottles on wooden shelf."
+                            class="h-full w-full object-cover object-center">
+                    </div>
+                    <h3 class="mt-6 text-sm text-gray-500">
+                        <a href="#">
+                            <span class="absolute inset-0"></span>
+                            Travel
+                        </a>
+                    </h3>
+                    <p class="text-base font-semibold text-gray-900">Daily commute essentials</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sale and testimonials -->
+<div class="relative overflow-hidden">
+    <!-- Decorative background image and gradient -->
+    <div aria-hidden="true" class="absolute inset-0">
+        <div class="absolute inset-0 mx-auto max-w-7xl overflow-hidden xl:px-8">
+            <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-sale-full-width.jpg" alt=""
+                class="h-full w-full object-cover object-center">
+        </div>
+        <div class="absolute inset-0 bg-white bg-opacity-75"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-white via-white"></div>
+    </div>
+
+    <!-- Sale -->
+    <section aria-labelledby="sale-heading"
+        class="relative mx-auto flex max-w-7xl flex-col items-center px-4 pt-32 text-center sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl lg:max-w-none">
+            <h2 id="sale-heading" class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+                Subscribe to our Newsletter</h2>
+            <p class="mx-auto mt-4 max-w-xl text-xl text-gray-600">Most of our demos on this site have some walkthroughs
+                of building them and some sort of story behind them. Subscribing to our newsletter keeps you up to date
+                with any new releases.</p>
+            <a href="https://infinitebit.substack.com/subscribe"
+                class="mt-6 inline-block w-full rounded-md border border-transparent bg-gray-900 px-8 py-3 font-medium text-white hover:bg-gray-800 sm:w-auto">Subscribe
+                now</a>
+        </div>
+    </section>
+
+</div>
+
+
+{% endblock %}

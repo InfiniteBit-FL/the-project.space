@@ -1,0 +1,11 @@
+{% set nav_li_class = "list-none" %}
+{% set nav_a_class = "text-2xl sm:text-base font-semibold leading-6" %}
+{% set active_link_class = " text-blue-600" %}
+{% set not_active_link_class = " text-gray-900" %}
+
+<li class="{{ nav_li_class }}">
+    <a aria-current="true"
+        class="{{ nav_a_class }}{{ active_link_class if request.url.path == '/' else not_active_link_class }}" href="/">
+        Home
+    </a>
+</li>

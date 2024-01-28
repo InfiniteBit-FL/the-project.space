@@ -1,0 +1,7 @@
+
+{% set curr_cache = "1706413741" %}
+{%- macro url_for(name, path) -%}
+{% set b, e = path.split('.') %}
+{{ '/' + name + b + '.' + curr_cache + '.' + e }}
+{%- endmacro -%}
+    
